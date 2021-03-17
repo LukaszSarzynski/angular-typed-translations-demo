@@ -7,6 +7,7 @@ import { en } from './en.translation';
 export enum WebsiteLanguage {
   English = 'en',
   Czech = 'cs',
+  Polish = 'pl',
 }
 
 /**
