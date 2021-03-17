@@ -12,8 +12,8 @@ const siteRoutes: Routes = [
     path: '',
     component: SiteComponent,
     children: [
-      {path: 'home', loadChildren: './home/home.module#HomeModule'},
-      {path: 'info', loadChildren: './info/info.module#InfoModule'},
+      {path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)},
+      {path: 'info', loadChildren: () => import('./info/info.module').then(m => m.InfoModule)},
       {path: '', pathMatch: 'full', redirectTo: 'home'},
     ],
   },
